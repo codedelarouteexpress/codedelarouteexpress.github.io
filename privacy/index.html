@@ -23,11 +23,9 @@
         line-height: 1.6;
       }
       .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
-      header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-      .logo {
-        width: 40px; height: 40px; border-radius: 10px; background: var(--red);
-        color: #fff; font-weight: 800; font-size: 24px; display: grid; place-items: center;
-      }
+      header { margin-bottom: 8px; }
+      .brand-link { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+      .logo { width: 44px; height: 44px; display: block; }
       .brand { font-weight: 700; font-size: 18px; }
       h1 { font-size: 28px; margin: 24px 0 4px; }
       .updated { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
@@ -43,8 +41,17 @@
   <body>
     <div class="wrap">
       <header>
-        <div class="logo">A</div>
-        <div class="brand">Code Express</div>
+        <a class="brand-link" href="/">
+          <svg class="logo" width="44" height="44" viewBox="0 0 240 240" fill="none" role="img" aria-label="Logo Code Express">
+            <g opacity="0.3" transform="translate(-12 0)">
+              <path d="M66 182 120 58 174 182" stroke="#e1404d" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" />
+              <line x1="87" y1="140" x2="153" y2="140" stroke="#e1404d" stroke-width="24" stroke-linecap="round" />
+            </g>
+            <path d="M66 182 120 58 174 182" stroke="#e1404d" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" />
+            <line x1="87" y1="140" x2="153" y2="140" stroke="#e1404d" stroke-width="24" stroke-linecap="round" />
+          </svg>
+          <span class="brand">Code Express</span>
+        </a>
       </header>
 
       <h1>Politique de confidentialité</h1>
@@ -93,7 +100,8 @@
 
       <footer>
         <p>
-          Code Express · <a href="./terms.html">Conditions d'utilisation</a> ·
+          Code Express · <a href="/terms/">Conditions d'utilisation</a> ·
+          <a href="/support/">Aide &amp; support</a> ·
           <a href="mailto:prismago.consulting@gmail.com">Contact</a>
         </p>
       </footer>
